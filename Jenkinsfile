@@ -8,13 +8,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        git branch: 'main',
-            url: 'https://github.com/Vennilavan12/Trend.git'
-      }
-    }
-
     stage('Build Docker Image') {
       steps {
         sh 'docker build -t trend-nginx .'
